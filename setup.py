@@ -47,6 +47,9 @@ setup(
         'Plone',
         'setuptools',
         'ftw.upgrade',
+        'ftw.lawgiver',
+        'Products.PloneFormGen < 1.8',
+        'openpyxl',
     ],
 
     tests_require=tests_require,

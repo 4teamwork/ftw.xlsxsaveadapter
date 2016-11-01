@@ -7,6 +7,8 @@
 
     <five:registerPackage package="." initialize=".initialize" />
 
+    <include file="lawgiver.zcml" />
+
     <genericsetup:registerProfile
         name="default"
         title="ftw.xlsxsaveadapter default"
@@ -27,5 +29,12 @@
         profile="ftw.xlsxsaveadapter:default"
         directory="upgrades"
         />
+
+    <class class=".xlsx_data_adapter.XlsxDataAdapterSchema">
+      <require
+          permission="zope2.View"
+          interface="Products.PloneFormGen.interfaces.actionAdapter.IPloneFormGenActionAdapter"
+          />
+    </class>
 
 </configure>

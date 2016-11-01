@@ -7,6 +7,7 @@ from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from zope.configuration import xmlconfig
+from .tests import builders
 
 
 class XlsxsaveadapterLayer(PloneSandboxLayer):
@@ -21,6 +22,7 @@ class XlsxsaveadapterLayer(PloneSandboxLayer):
             '</configure>',
             context=configurationContext)
 
+        z2.installProduct(app, 'Products.PloneFormGen')
         z2.installProduct(app, 'ftw.xlsxsaveadapter')
 
     def setUpPloneSite(self, portal):
