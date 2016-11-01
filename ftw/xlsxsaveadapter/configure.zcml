@@ -3,11 +3,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="ftw.xlsxsaveadapter">
 
     <five:registerPackage package="." initialize=".initialize" />
 
-    <include file="lawgiver.zcml" />
+    <include zcml:condition="installed ftw.lawgiver" file="lawgiver.zcml" />
 
     <genericsetup:registerProfile
         name="default"
