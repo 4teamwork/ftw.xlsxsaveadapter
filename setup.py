@@ -18,7 +18,7 @@ extras_require = {
 setup(
     name='ftw.xlsxsaveadapter',
     version=version,
-    description='ftw.xlsxsaveadapter',
+    description='Excel adapter for PloneFormGen',
     long_description=open('README.rst').read(),
 
     # Get more strings from
