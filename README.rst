@@ -4,7 +4,10 @@
 Introduction
 ============
 
-### INTRODUCTION ###
+
+This package adds an excel save adapter for PloneFormGen.
+The adapter is derived from the existing csv adapter and adds options
+to either download an excel through the site or email the excel file to a list of recipients.
 
 Compatibility
 -------------
